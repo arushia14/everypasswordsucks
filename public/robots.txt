@@ -1,0 +1,6 @@
+# Allow all crawlers
+User-agent: *
+Allow: /
+
+# Sitemap location (update after deployment)
+Sitemap: https://everypasswordsucks.com/sitemap.xml

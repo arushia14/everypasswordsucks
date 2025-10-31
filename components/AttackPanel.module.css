@@ -1,0 +1,120 @@
+.panel {
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 4px 16px var(--shadow);
+  transition: all 300ms ease;
+  opacity: 0;
+  animation: fadeInUp 500ms ease forwards;
+}
+
+.panel.vulnerable {
+  border-color: var(--danger);
+  box-shadow: 0 4px 16px var(--danger-glow);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.icon {
+  font-size: 24px;
+}
+
+.title {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.status {
+  font-size: 14px;
+  color: var(--text-secondary);
+  min-height: 20px;
+}
+
+.progressBar {
+  width: 100%;
+  height: 8px;
+  background-color: var(--bg-tertiary);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.progressFill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--accent-primary), var(--success));
+  border-radius: 4px;
+  transition: width 200ms ease;
+}
+
+.vulnerable .progressFill {
+  background: linear-gradient(90deg, var(--warning), var(--danger));
+}
+
+.progressText {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--text-secondary);
+  text-align: right;
+}
+
+.attempts {
+  font-family: var(--font-mono);
+  font-size: 14px;
+  color: var(--text-primary);
+}
+
+.timeContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 8px;
+  border-top: 1px solid var(--border);
+}
+
+.time {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.warningIcon {
+  font-size: 18px;
+  animation: pulse 2s infinite;
+}
+
+@media (max-width: 768px) {
+  .panel {
+    padding: 20px;
+    border-radius: 12px;
+  }
+
+  .icon {
+    font-size: 20px;
+  }
+
+  .title {
+    font-size: 14px;
+  }
+
+  .status {
+    font-size: 13px;
+  }
+
+  .attempts, .time {
+    font-size: 13px;
+  }
+}

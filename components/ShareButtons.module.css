@@ -1,0 +1,103 @@
+.container {
+  margin-top: 32px;
+  padding: 32px;
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  text-align: center;
+}
+
+.title {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 20px;
+}
+
+.buttons {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 24px;
+  background-color: var(--bg-tertiary);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  color: var(--text-primary);
+  font-size: 14px;
+  font-weight: 600;
+  transition: all 200ms ease;
+}
+
+.button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px var(--shadow);
+}
+
+.button:active {
+  transform: translateY(0);
+}
+
+.icon {
+  font-size: 18px;
+}
+
+.label {
+  font-family: var(--font-heading);
+}
+
+/* Platform-specific colors */
+.twitter:hover {
+  background-color: #1DA1F2;
+  border-color: #1DA1F2;
+  color: white;
+}
+
+.linkedin:hover {
+  background-color: #0A66C2;
+  border-color: #0A66C2;
+  color: white;
+}
+
+.reddit:hover {
+  background-color: #FF4500;
+  border-color: #FF4500;
+  color: white;
+}
+
+.copy:hover {
+  background-color: var(--accent-primary);
+  border-color: var(--accent-primary);
+  color: var(--bg-primary);
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 24px 20px;
+    margin-top: 24px;
+  }
+
+  .title {
+    font-size: 18px;
+    margin-bottom: 16px;
+  }
+
+  .buttons {
+    gap: 12px;
+  }
+
+  .button {
+    padding: 10px 20px;
+    font-size: 13px;
+  }
+
+  .icon {
+    font-size: 16px;
+  }
+}
