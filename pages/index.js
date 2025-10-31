@@ -36,6 +36,14 @@ export default function Home() {
     // Analyze password
     const result = analyzePassword(password)
 
+    // Track password test event in Google Analytics
+    if (typeof window !== 'undefined' && window.gtag) {
+      window.gtag('event', 'password_tested', {
+        strength_score: result.score,
+        is_strong: result.isStrong
+      })
+    }
+
     // Start animation sequence
     animateAttackSequence(result)
   }
