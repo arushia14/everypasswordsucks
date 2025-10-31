@@ -4,7 +4,7 @@ import GoogleAnalytics from '../components/GoogleAnalytics'
 export default function App({ Component, pageProps }) {
   // Add your Google Analytics measurement ID here
   // Get it from: https://analytics.google.com/
-  const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || 'G-4J0GTZMCKH'
+  const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || 'G-GPGMS2LWXH'
 
   // Debug: log to console (remove after testing)
   if (typeof window !== 'undefined') {
